@@ -27,7 +27,6 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
         
         guard let items = collectionView.dequeueReusableCell(withReuseIdentifier: "items", for: indexPath) as? CollectionCell  else {return UICollectionViewCell()}
         items.imageGallery.image = photoGallery[indexPath.row]
-    
         return items
     }
     
