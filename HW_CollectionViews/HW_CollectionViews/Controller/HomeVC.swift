@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -18,5 +18,5 @@ class HomeVC: UIViewController {
     }
     
     
-
+    
 }

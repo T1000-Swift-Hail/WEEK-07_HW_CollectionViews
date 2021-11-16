@@ -38,7 +38,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "toPhoto", sender: nil)
+        performSegue(withIdentifier: "toPhoto", sender: nil)
     }
     
     
@@ -54,6 +54,6 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
         
         
     }
-
+    
     
 }
