@@ -1,0 +1,31 @@
+//
+//  ImageView.swift
+//  CollectionViews
+//
+//  Created by iAbdullah17 on 11/04/1443 AH.
+//
+
+import UIKit
+
+class ImageView: UIViewController {
+
+    @IBOutlet weak var fullPicture: UIImageView!
+    var selectedPicture : UIImage!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        fullPicture.image = selectedPicture
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
