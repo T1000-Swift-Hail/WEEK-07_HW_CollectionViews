@@ -14,10 +14,9 @@ class secound_screen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        natureimg.image = secondimg
         // Do any additional setup after loading the view.
     }
-    natureimg.image = secondimg
 
 
 
