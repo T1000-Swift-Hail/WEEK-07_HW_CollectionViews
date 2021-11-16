@@ -14,7 +14,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collection: UICollectionView!
     
-    var arrPhoto = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!,UIImage(named: "7")!,UIImage(named: "8")!,UIImage(named: "9")!,UIImage(named: "10")!,UIImage(named: "11")!,UIImage(named: "12")!,UIImage(named: "13")!,UIImage(named: "14")!,UIImage(named: "15")!,UIImage(named: "16")!,UIImage(named: "17")!,UIImage(named: "18")!,UIImage(named: "19")!,UIImage(named: "20")!,UIImage(named: "21")!,UIImage(named: "22")!,UIImage(named: "23")!,UIImage(named: "24")!,UIImage(named: "25")!,UIImage(named: "26")!,UIImage(named: "27")!,UIImage(named: "28")!,UIImage(named: "29")!,UIImage(named: "30")!]
+    var arrPhoto = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!,UIImage(named: "7")!,UIImage(named: "8")!,UIImage(named: "9")!,UIImage(named: "10")!,UIImage(named: "11")!,UIImage(named: "12")!,UIImage(named: "13")!,UIImage(named: "14")!,UIImage(named: "15")!]
   
     override func viewDidLoad() {
         super.viewDidLoad()
