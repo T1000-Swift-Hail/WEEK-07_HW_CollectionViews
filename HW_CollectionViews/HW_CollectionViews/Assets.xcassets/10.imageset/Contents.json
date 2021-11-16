@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "monika-grabkowska-tv-d1R3FItE-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "monika-grabkowska-tv-d1R3FItE-unsplash-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "monika-grabkowska-tv-d1R3FItE-unsplash-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

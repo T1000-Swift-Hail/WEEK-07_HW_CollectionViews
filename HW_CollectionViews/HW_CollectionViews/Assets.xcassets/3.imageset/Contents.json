@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "andrew-johnson-ry13W09x_LY-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "andrew-johnson-ry13W09x_LY-unsplash-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "andrew-johnson-ry13W09x_LY-unsplash-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
