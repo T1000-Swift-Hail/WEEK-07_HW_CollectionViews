@@ -12,7 +12,7 @@
 - When clicking on an image , disply the image in full screen on another View Controller.  
 
 
-### Your photo gallery should look similar to this (Note: You can design your own gallery as you wish) :
+## Your photo gallery should look similar to this (Note: You can design your own gallery as you wish) :
 
 <div style="text-align:center; width: 100%; display: flext; flex-direction: row; flex-wrap: wrap;">
  <img src = "https://github.com/T1000-Swift-Hail/WEEK-07_HW_CollectionViews/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202021-11-16%20at%2010.58.03.png?raw=true" style="width:45%; height: auto"/>
