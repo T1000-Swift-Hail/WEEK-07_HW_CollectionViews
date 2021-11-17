@@ -26,11 +26,7 @@ class ArtVC : UIViewController  {
     
     }
     
-    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let vc = segue.destination as!
-        //ArtVC.Type
-   
-    //}
+    
 
 
 }

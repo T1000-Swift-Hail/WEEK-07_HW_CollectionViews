@@ -9,9 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var fullScreenImage: UIImageView!
+    
+    
+    var fullImageName : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        fullScreenImage.image = UIImage(named:fullImageName)
     }
 
 

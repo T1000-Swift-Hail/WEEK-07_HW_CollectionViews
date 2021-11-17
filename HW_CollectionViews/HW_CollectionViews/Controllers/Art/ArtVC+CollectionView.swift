@@ -45,13 +45,33 @@ extension ArtVC :UICollectionViewDataSource,UICollectionViewDelegate,UICollectio
     }
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        print("selecting item")
     
         
         performSegue(withIdentifier: "toDetals", sender: nil)
       
     
 }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toDetals" {
+            
+            if let selectedItem = collictionView.indexPathsForSelectedItems?[0] {
+                
+                let destination = segue.destination as! ViewController
+                destination.fullImageName = method.MethodsImage[selectedItem.row].rawValue
+            }
+            
+            
+        }
+        
+    }
+    
+    
+    
     
 }
 
