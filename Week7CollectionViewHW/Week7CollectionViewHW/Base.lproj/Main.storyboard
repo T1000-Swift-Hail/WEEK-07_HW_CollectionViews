@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AK1-iK-X6R">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nature Photo Gallary-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week7CollectionViewHW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n9B-Jx-tqW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MiE-Lo-xtz">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="picsCell" id="FBL-pN-TOM" customClass="PicsCollectionViewCell" customModule="Week7CollectionViewHW" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OfH-2G-r6F">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o1H-h8-nor">
+                                                    <rect key="frame" x="8" y="0.0" width="120" height="128"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-qE-FFd">
+                                                    <rect key="frame" x="8" y="0.0" width="120" height="120"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                    <connections>
+                                                        <action selector="btnSeg:" destination="FBL-pN-TOM" eventType="touchUpInside" id="WWB-Ff-LmN"/>
+                                                        <segue destination="1dW-0a-0M3" kind="show" identifier="fullNaturePics" id="rhI-ke-DMY"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hLA-qE-FFd" firstAttribute="trailing" secondItem="o1H-h8-nor" secondAttribute="trailing" id="5zj-14-UMu"/>
+                                                <constraint firstItem="o1H-h8-nor" firstAttribute="leading" secondItem="OfH-2G-r6F" secondAttribute="leading" constant="8" id="PR6-62-rYS"/>
+                                                <constraint firstItem="o1H-h8-nor" firstAttribute="top" secondItem="OfH-2G-r6F" secondAttribute="top" id="bnM-wg-rWU"/>
+                                                <constraint firstItem="hLA-qE-FFd" firstAttribute="bottom" secondItem="OfH-2G-r6F" secondAttribute="bottomMargin" id="gbP-6k-8Ks"/>
+                                                <constraint firstItem="hLA-qE-FFd" firstAttribute="leading" secondItem="o1H-h8-nor" secondAttribute="leading" id="jh0-sN-dY2"/>
+                                                <constraint firstAttribute="trailing" secondItem="o1H-h8-nor" secondAttribute="trailing" id="lPJ-nC-XAT"/>
+                                                <constraint firstAttribute="bottom" secondItem="o1H-h8-nor" secondAttribute="bottom" id="pDq-I3-eSj"/>
+                                                <constraint firstItem="hLA-qE-FFd" firstAttribute="top" secondItem="o1H-h8-nor" secondAttribute="top" id="tHo-ED-dLL"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgNature" destination="o1H-h8-nor" id="14p-Vk-E2u"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n9B-Jx-tqW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RQB-eL-ohl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n9B-Jx-tqW" secondAttribute="bottom" id="ZpC-sa-cll"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n9B-Jx-tqW" secondAttribute="trailing" id="aGQ-Hh-f5t"/>
+                            <constraint firstItem="n9B-Jx-tqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oFA-KK-XqU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nature Photo Gallary" id="S4x-MX-AMg"/>
+                    <connections>
+                        <outlet property="collectionView" destination="n9B-Jx-tqW" id="S9Q-KL-Qt1"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="85.714285714285708"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="0NO-Py-37b">
+            <objects>
+                <viewController storyboardIdentifier="fullNaturePic" id="1dW-0a-0M3" customClass="SecondVC" customModule="Week7CollectionViewHW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zPX-bk-EgK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cme-Lk-Mxe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rHp-rI-cA5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rHp-rI-cA5" firstAttribute="trailing" secondItem="cme-Lk-Mxe" secondAttribute="trailing" id="Fgo-lX-oAx"/>
+                            <constraint firstItem="cme-Lk-Mxe" firstAttribute="leading" secondItem="rHp-rI-cA5" secondAttribute="leading" id="Rcs-N4-pjk"/>
+                            <constraint firstItem="cme-Lk-Mxe" firstAttribute="top" secondItem="rHp-rI-cA5" secondAttribute="top" id="mdh-2n-VgY"/>
+                            <constraint firstItem="rHp-rI-cA5" firstAttribute="bottom" secondItem="cme-Lk-Mxe" secondAttribute="bottom" id="q61-ef-ww1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mly-Qt-1vy"/>
+                    <connections>
+                        <outlet property="natureFullView" destination="cme-Lk-Mxe" id="v2k-y5-Cfs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jwZ-l6-azm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1675" y="86"/>
+        </scene>
+        <!--Nature Photo Gallary-->
+        <scene sceneID="cRf-mC-0PS">
+            <objects>
+                <navigationController title="Nature Photo Gallary" automaticallyAdjustsScrollViewInsets="NO" id="AK1-iK-X6R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0v2-iF-vJ7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="96q-EG-1Uy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEe-H7-o7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
