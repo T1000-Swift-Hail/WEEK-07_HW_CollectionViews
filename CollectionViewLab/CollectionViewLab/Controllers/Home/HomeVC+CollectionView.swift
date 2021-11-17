@@ -33,31 +33,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.CellPhoto.image = UIImage(named: photoImege.dataMethod[indexPath.row].rawValue)
         return cell
         
-        
-       
-        
-        
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
-            
-        case 0 : performSegue(withIdentifier:"cr1", sender: nil)
-        case 1:performSegue(withIdentifier:"cr2", sender: nil)
-        case 2:performSegue(withIdentifier:"cr3", sender: nil)
-        case 3:performSegue(withIdentifier:"cr4", sender: nil)
-        case 4:performSegue(withIdentifier:"cr5", sender: nil)
-        case 5:performSegue(withIdentifier:"cr6", sender: nil)
-        case 6:performSegue(withIdentifier:"cr7", sender: nil)
-        case 7:performSegue(withIdentifier:"cr8", sender: nil)
-        case 8:performSegue(withIdentifier:"cr9", sender: nil)
-        case 9:performSegue(withIdentifier:"cr10", sender: nil)
-        case 10:performSegue(withIdentifier:"cr11", sender: nil)
-        case 11:performSegue(withIdentifier:"cr12", sender: nil)
-
-            
         default:
             print("")
         }
@@ -67,12 +46,37 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width) / 2 , height: (view.frame.height) / 8)
+        return CGSize(width: (view.frame.width) / 2 , height: (view.frame.height) / 4)
         
        
     }
     
-     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        if (indexPath.row != 13) {
+            
+            performSegue(withIdentifier: "ToSecondScreen", sender: nil)
+            
+            
+    } else
+            
+{
+                
+                
+                print("")
+                
+            }
+    }
+    
+    
     
     
 }
