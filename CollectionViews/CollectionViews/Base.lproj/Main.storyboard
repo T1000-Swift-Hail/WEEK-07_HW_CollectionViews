@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7HL-49-zNK">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7HL-49-zNK">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                 </imageView>
                                             </subviews>
@@ -74,14 +74,28 @@
         <!--View Controller-->
         <scene sceneID="gbr-pc-TUq">
             <objects>
-                <viewController id="iqm-PF-gf8" sceneMemberID="viewController">
+                <viewController id="iqm-PF-gf8" customClass="ViewController" customModule="CollectionViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ocp-YL-FUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BQa-wF-Ckx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vgt-SL-TXh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BQa-wF-Ckx" firstAttribute="leading" secondItem="vgt-SL-TXh" secondAttribute="leading" id="U2d-uG-LgV"/>
+                            <constraint firstItem="BQa-wF-Ckx" firstAttribute="top" secondItem="vgt-SL-TXh" secondAttribute="top" id="fSX-YW-0t1"/>
+                            <constraint firstItem="vgt-SL-TXh" firstAttribute="bottom" secondItem="BQa-wF-Ckx" secondAttribute="bottom" id="gK8-Mw-tH3"/>
+                            <constraint firstItem="vgt-SL-TXh" firstAttribute="trailing" secondItem="BQa-wF-Ckx" secondAttribute="trailing" id="qx5-Vs-EdL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BS8-X8-Pj8"/>
+                    <connections>
+                        <outlet property="fullimageName" destination="BQa-wF-Ckx" id="mQk-WG-nuw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6I4-IV-mIR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

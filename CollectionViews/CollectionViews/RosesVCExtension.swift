@@ -37,14 +37,28 @@ extension RosesVC : UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.width) / 2 , height: (view.frame.height) / 3)
                       }
 
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("selecting item")
+        let imageName = method.mehodsData[indexPath.row].rawValue
+        selectedImage = UIImage(named: imageName)
         performSegue(withIdentifier: "toDetals", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetals" {
+            
+                let destination = segue.destination
+                as! ViewController
+                destination.selectedImage = selectedImage
+                
+        
+        }
     }
 
 

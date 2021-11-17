@@ -8,10 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var fullimageName: UIImageView!
+    
+    
+    
+    var selectedImage: UIImage? = nil
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        fullimageName.image = selectedImage
+        
+        
+        
     }
 
 
