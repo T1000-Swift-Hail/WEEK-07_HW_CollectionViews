@@ -37,24 +37,12 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o1H-h8-nor">
                                                     <rect key="frame" x="8" y="0.0" width="120" height="128"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-qE-FFd">
-                                                    <rect key="frame" x="8" y="0.0" width="120" height="120"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title=""/>
-                                                    <connections>
-                                                        <segue destination="1dW-0a-0M3" kind="show" identifier="fullNaturePics" id="rhI-ke-DMY"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hLA-qE-FFd" firstAttribute="trailing" secondItem="o1H-h8-nor" secondAttribute="trailing" id="5zj-14-UMu"/>
                                                 <constraint firstItem="o1H-h8-nor" firstAttribute="leading" secondItem="OfH-2G-r6F" secondAttribute="leading" constant="8" id="PR6-62-rYS"/>
                                                 <constraint firstItem="o1H-h8-nor" firstAttribute="top" secondItem="OfH-2G-r6F" secondAttribute="top" id="bnM-wg-rWU"/>
-                                                <constraint firstItem="hLA-qE-FFd" firstAttribute="bottom" secondItem="OfH-2G-r6F" secondAttribute="bottomMargin" id="gbP-6k-8Ks"/>
-                                                <constraint firstItem="hLA-qE-FFd" firstAttribute="leading" secondItem="o1H-h8-nor" secondAttribute="leading" id="jh0-sN-dY2"/>
                                                 <constraint firstAttribute="trailing" secondItem="o1H-h8-nor" secondAttribute="trailing" id="lPJ-nC-XAT"/>
                                                 <constraint firstAttribute="bottom" secondItem="o1H-h8-nor" secondAttribute="bottom" id="pDq-I3-eSj"/>
-                                                <constraint firstItem="hLA-qE-FFd" firstAttribute="top" secondItem="o1H-h8-nor" secondAttribute="top" id="tHo-ED-dLL"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -76,6 +64,7 @@
                     <navigationItem key="navigationItem" title="Nature Photo Gallary" id="S4x-MX-AMg"/>
                     <connections>
                         <outlet property="collectionView" destination="n9B-Jx-tqW" id="KzI-xq-7Ms"/>
+                        <segue destination="1dW-0a-0M3" kind="show" identifier="fullNaturePics" id="A46-hD-8pU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
