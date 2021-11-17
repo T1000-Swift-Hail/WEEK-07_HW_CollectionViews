@@ -12,7 +12,7 @@ enum NamePhoto:String {
     
     case first = "1-1"
     case second = "1-2"
-    case three = "1-3"
+    case three =  "1-3"
     case four = "1-4"
     case five = "1-5"
     case six = "1-6"
@@ -24,9 +24,9 @@ enum NamePhoto:String {
     case twelve = "1-12"
 }
 
-struct MethodData {
+struct PhotosData {
     
-    let dataMethods:[NamePhoto] = [.first,.second,.three,.four,.five,.six,.seven,.eigh,.nine,.ten,.eleven,.twelve]
+    let dataPhotos:[NamePhoto] = [.first,.second,.three,.four,.five,.six,.seven,.eigh,.nine,.ten,.eleven,.twelve]
     
 }
 

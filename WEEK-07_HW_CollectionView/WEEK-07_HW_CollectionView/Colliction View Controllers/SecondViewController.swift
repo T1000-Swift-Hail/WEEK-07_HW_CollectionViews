@@ -1,27 +1,25 @@
 //
-//  HomeViewController.swift
+//  SecondViewController.swift
 //  WEEK-07_HW_CollectionView
 //
-//  Created on 11/04/1443 AH.
+//  Created by Ahmed Alenazi on 12/04/1443 AH.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class SecondViewController: UIViewController {
+   
+    @IBOutlet weak var imegView: UIImageView!
     
-
-    @IBOutlet weak var PhotoCollictionView: UICollectionView!
-    
-    let photos = PhotosData()
-    var imege : UIImage!
+    var fullScreenImage : UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        setDelegate()
+
         // Do any additional setup after loading the view.
+        
+        imegView.image = fullScreenImage
     }
-    
     
 
     /*

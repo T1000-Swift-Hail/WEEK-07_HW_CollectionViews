@@ -20,38 +20,41 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return method.dataMethods.count
+        return photos.dataPhotos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell else {return UICollectionViewCell()}
 
-        cell.PhotoGalary.image = UIImage(named: method.dataMethods[indexPath.row].rawValue)
+        cell.PhotoGalary.image = UIImage(named: photos.dataPhotos[indexPath.row].rawValue)
         
         return cell
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-        switch indexPath.row {
-            
-        case 0:
-            let alert = UIAlertController(title: "Hi", message: nil, preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
-            present(alert, animated: true, completion: nil)
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let photo = photos.dataPhotos[indexPath.row].rawValue
+        imege = UIImage(named: photo )
             performSegue(withIdentifier: "toShowImege", sender: nil)
-        default:
-            print("")
-        }
-        
+            
     }
- 
+
         
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width) / 2 , height: (view.frame.height) / 6)
+        return CGSize(width: (view.frame.width) / 1, height: (view.frame.height) / 6)
     }
+  
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toShowImege"{
+            let SecondImege = segue.destination as!SecondViewController
+            SecondImege.fullScreenImage = imege
+            
+    }
+}
 
 }
 
