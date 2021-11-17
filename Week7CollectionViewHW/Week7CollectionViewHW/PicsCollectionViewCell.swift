@@ -11,8 +11,7 @@ class PicsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imgNature: UIImageView!
     
-    @IBAction func btnSeg(_ sender: Any) {
-    }
+
     func setupCell(photo: UIImage){
         imgNature.image = photo
         

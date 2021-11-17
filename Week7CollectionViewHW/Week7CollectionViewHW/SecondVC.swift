@@ -11,7 +11,8 @@ class SecondVC: UIViewController {
 
     
     @IBOutlet weak var natureFullView: UIImageView!
-    var fullimg = UIImage().self
+    var fullimg : UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         natureFullView.image = fullimg

@@ -13,14 +13,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var arrNaturePics = [NaturePics]()
         
-    
+    var selectedImage = UIImage(named: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
+
      
         arrNaturePics.append(NaturePics(photo: UIImage(named: "pic1")!))
         arrNaturePics.append(NaturePics(photo: UIImage(named: "pic2")!))
@@ -35,6 +35,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         arrNaturePics.append(NaturePics(photo: UIImage(named: "pic11")!))
         arrNaturePics.append(NaturePics(photo: UIImage(named: "pic12")!))
         
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
     
@@ -57,14 +60,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("hiii")
+        selectedImage = arrNaturePics[indexPath.row].photo
         performSegue(withIdentifier: "fullNaturePics", sender: nil)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "fullNaturePics" {
-            let natures = arrNaturePics [(self.collectionView.indexPathsForVisibleItems[0].row)]
+//            let selectedIndex = collectionView.indexPathsForSelectedItems?[0].row ?? 0
+//            print(selectedIndex)
+//            let natures = arrNaturePics[0]
             let destination = segue.destination as! SecondVC
-            destination.fullimg = natures.photo
+            destination.fullimg = selectedImage
         }
     }
 

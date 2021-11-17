@@ -12,7 +12,6 @@
         <!--Nature Photo Gallary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week7CollectionViewHW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -43,7 +42,6 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title=""/>
                                                     <connections>
-                                                        <action selector="btnSeg:" destination="FBL-pN-TOM" eventType="touchUpInside" id="WWB-Ff-LmN"/>
                                                         <segue destination="1dW-0a-0M3" kind="show" identifier="fullNaturePics" id="rhI-ke-DMY"/>
                                                     </connections>
                                                 </button>
@@ -77,9 +75,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Nature Photo Gallary" id="S4x-MX-AMg"/>
                     <connections>
-                        <outlet property="collectionView" destination="n9B-Jx-tqW" id="S9Q-KL-Qt1"/>
+                        <outlet property="collectionView" destination="n9B-Jx-tqW" id="KzI-xq-7Ms"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="915.94202898550736" y="85.714285714285708"/>
         </scene>
