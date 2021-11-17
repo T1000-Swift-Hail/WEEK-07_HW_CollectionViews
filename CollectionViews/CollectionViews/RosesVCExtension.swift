@@ -40,5 +40,12 @@ extension RosesVC : UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.width) / 2 , height: (view.frame.height) / 3)
                       }
-}
 
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selecting item")
+        performSegue(withIdentifier: "toDetals", sender: nil)
+    }
+
+
+}
