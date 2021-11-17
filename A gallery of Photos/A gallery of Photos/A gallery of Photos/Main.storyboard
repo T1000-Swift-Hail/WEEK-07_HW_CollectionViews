@@ -45,6 +45,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="e8F-Oy-4KC" secondAttribute="bottom" id="hPQ-Cp-wVv"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="128"/>
                                         <connections>
                                             <outlet property="imageView" destination="e8F-Oy-4KC" id="UiP-BA-cxB"/>
                                         </connections>
@@ -64,7 +65,7 @@
                     <navigationItem key="navigationItem" title="Coffee Photo Gallery" id="ZbT-1x-uvj"/>
                     <connections>
                         <outlet property="collectionV" destination="XMr-JP-48c" id="IA3-YT-x1w"/>
-                        <segue destination="R2K-D2-cTj" kind="show" id="lDu-IE-xR3"/>
+                        <segue destination="R2K-D2-cTj" kind="show" identifier="Detals" id="lDu-IE-xR3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,12 +75,12 @@
         <!--View Controller-->
         <scene sceneID="Pgb-Ca-PQ1">
             <objects>
-                <viewController id="R2K-D2-cTj" sceneMemberID="viewController">
+                <viewController id="R2K-D2-cTj" customClass="ViewController" customModule="A_gallery_of_Photos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VKP-Ef-4NB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-j2-aAB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-j2-aAB">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                         </subviews>
@@ -93,6 +94,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Qd-bx-Oh0"/>
+                    <connections>
+                        <outlet property="fullImeg" destination="aPy-j2-aAB" id="fNF-og-YPP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GeS-ln-6JU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
