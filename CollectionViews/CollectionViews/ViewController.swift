@@ -14,7 +14,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collection: UICollectionView!
     
-    var arrPhoto = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!,UIImage(named: "7")!,UIImage(named: "8")!,UIImage(named: "9")!,UIImage(named: "10")!]
+    var arrPhoto = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!,UIImage(named: "7")!,UIImage(named: "8")!,UIImage(named: "9")!,UIImage(named: "10")!,UIImage(named: "11")!,UIImage(named: "12")!,UIImage(named: "13")!,UIImage(named: "14")!,UIImage(named: "15")!,UIImage(named: "16")!]
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,19 +44,19 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
         return 0
     }
 
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "Art", sender: nil)
-//    }
-//       
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if segue.identifier == "Art"{
-//
-//        let gallery = arrPhoto [ self.collectionView.in
-//                            [0].row ?? 0]
-//            let destination = segue.destination as! PhotoViewController
-//            destination.viewImage = gallery
-//            }
-//
-//      }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "Art", sender: nil)
+    }
+       
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "Art" {
+        
+        let gallery = arrPhoto[self.collection.indexPathsForSelectedItems? [0].row ?? 0]
+        let destination = segue.destination as! PhotoViewController
+            destination.viewImage = gallery
+            }
+      }
 }
+                
+
